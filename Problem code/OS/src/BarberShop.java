@@ -41,6 +41,7 @@ public class BarberShop {
             waitingCustomers.release();
             try {
                 barberSemaphore.acquire();
+                waitingCustomers.acquire();
                 namesSemaphore.acquire();
                 Barber barber = new Barber(delay, "" + names.poll());
                 namesSemaphore.release();
