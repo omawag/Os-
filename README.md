@@ -8,10 +8,12 @@ An example of deadlock:
 When barbers wait for their customers and at the same time the customers wait for the barbers to call out their names.
 Solution:
 The barbers should check the customer’s waiting room before sleep
+
 An example of starvation:
 When customers don’t follow an order and customers get a haircut before others even if they wait for a long time, or when a barber keep doing all the jobs leaving others sleeping.
 Solution:
 Giving higher priority to the customer or barber who waited more by enabling fairness in semaphore or lock
+
 Real-world Example:	
 A program to check whether the solution of a problem is correct or not by having a tester thread that checks whether the answer is the same as the correct answer or not, and a submission thread that loads the answer. The submission waits in a queue for a tester to finish working, and testers wait for a submission to arrive to test it like how the barber wait customer and a customer wait for barber.
  
